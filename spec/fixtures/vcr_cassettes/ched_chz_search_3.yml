@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.nal.usda.gov/fdc/v1/foods/search?api_key=<FOODDATA_API_KEY>&cheese
+    uri: https://api.nal.usda.gov/fdc/v1/foods/search?api_key=<FOODDATA_API_KEY>&cheese&maxItems=10
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 24 May 2024 16:22:15 GMT
+      - Fri, 24 May 2024 16:54:10 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -44,7 +44,7 @@ http_interactions:
       Via:
       - https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       X-Api-Umbrella-Request-Id:
-      - cfldkfon4afc6df9f0ig
+      - cfle336ppdsrbllt1d3g
       X-Cache:
       - MISS
       X-Content-Type-Options:
@@ -52,9 +52,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '3600'
       X-Ratelimit-Remaining:
-      - '3585'
+      - '3563'
       X-Vcap-Request-Id:
-      - 8ab6f9db-8ad4-4c35-4465-22b9de0a79b8
+      - eb1c9e8d-7139-4e32-5af5-51f807af2a3f
       X-Xss-Protection:
       - 1; mode=block
       X-Frame-Options:
@@ -5893,5 +5893,5 @@ http_interactions:
         in meat)","derivationId":68,"value":0.0,"foodNutrientSourceId":5,"foodNutrientSourceCode":"7","foodNutrientSourceDescription":"Assumed
         zero","rank":8700,"indentLevel":1,"foodNutrientId":1411017,"dataPoints":0}],"finalFoodInputFoods":[],"foodMeasures":[],"foodAttributes":[],"foodAttributeTypes":[],"foodVersionIds":[]}],"aggregations":{"dataType":{"Branded":453297,"SR
         Legacy":7793,"Survey (FNDDS)":5624,"Foundation":287,"Experimental":103},"nutrients":{}}}'
-  recorded_at: Fri, 24 May 2024 16:22:16 GMT
+  recorded_at: Fri, 24 May 2024 16:54:10 GMT
 recorded_with: VCR 6.2.0

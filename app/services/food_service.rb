@@ -14,14 +14,16 @@ class FoodService
   def get_search(query)
     # replaces each space with %20
     query = query.gsub(" ", "%20")
-    response = get_url("v1/foods/search?#{query}")
+    response = get_url("v1/foods/search?#{query}&maxItems=10")
 
-    response[:foods]
+    foods = response[:foods]
+    foods.take(10)
+    # only the first 10 elements of the foods array are returned
   end
 
   def total_hits(query)
     query = query.gsub(" ", "%20")
-    response = get_url("v1/foods/search?#{query}")
+    response = get_url("v1/foods/search?#{query}&maxItems=10")
 
     response[:totalHits]
   end

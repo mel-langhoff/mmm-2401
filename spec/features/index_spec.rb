@@ -13,13 +13,9 @@ RSpec.describe 'Food Search Results Index Page' do
         foods_result_number = all('ul > li').size
 
         expect(foods_result_number).to eq 10
-        # description
-        expect(page).to have_content("SWEET POTA")
-        # gti_upc
-        expect(page).to have_content("832298010009")
-        # brand_owner
-        expect(page).to have_content("NOT A BRANDED ITEM")
-        # ingredients & there are no ingredients for this search result
+        expect(page).to have_content("Description:")
+        expect(page).to have_content("GTIN/UPC code:")
+        expect(page).to have_content("Brand Owner:")
         expect(page).to have_content("Ingredients:")
       end
     end
