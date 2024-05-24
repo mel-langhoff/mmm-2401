@@ -5,8 +5,8 @@
 <ul>
   <% @foods.each do |food| %>
     <li>
-      <%# for some reason, the gtinUpc code field doesn't work, but fdcId works just fine?? %>
-      <p>GTIN/UPC code: <%= food[:fdcId] %></p>
+      <%# for some reason, the gtinUpc code field doesn't work, but fdcId works for example just fine?? %>
+      <p>GTIN/UPC code: <%= food[:gtinUpc] %></p>
       <p>Description: <%= food[:description] %></p>
       <p>Brand Owner: <%= food[:brandOwner] %></p>
       <p>Ingredients: <%= food[:ingredients] %></p>
