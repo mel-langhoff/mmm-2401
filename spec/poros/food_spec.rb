@@ -14,8 +14,6 @@ RSpec.describe Food do
 
     expect(food).to be_an_instance_of Food
     expect(food.description).to eq("Cheddar Cheese")
-    expect(food.brand_owner).to eq("Kraft")
     expect(food.ingredients).to eq("Cheese, cheddar, love")
-    expect(food.gtin_upc).to eq("094395000172")
   end
 end

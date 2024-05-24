@@ -1,11 +1,15 @@
-<h1>Search Results</h1>
+<h1>Food Search Results</h1>
+<h3>Total Results: <%= @total_hits %></h3>
 
-<% if @results.any? %>
-  <ul>
-    <% @results.each do |food| %>
-      <li><%= food["description"] %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>No results found</p>
-<% end %>
+<div id="food-results">
+<ul>
+  <% @foods.each do |food| %>
+    <li>
+      <p>GTIN/UPC code: <%= food.gtin_upc %></p>
+      <p>Description: <%= food.description %></p>
+      <p>Brand Owner: <%= food.brand_owner %></p>
+      <p>Ingredients: <%= food.ingredients %></p>
+    </li>
+  <% end %>
+</ul>
+</div>

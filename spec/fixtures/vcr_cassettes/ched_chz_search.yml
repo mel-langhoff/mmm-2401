@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 24 May 2024 15:40:59 GMT
+      - Fri, 24 May 2024 16:22:00 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,10 +31,10 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Age:
-      - '2'
+      - '0'
       Set-Cookie:
-      - ApplicationGatewayAffinity=50338e381d6b5be775f36f07abdc605f; Path=/
-      - ApplicationGatewayAffinityCORS=50338e381d6b5be775f36f07abdc605f; Path=/; SameSite=None;
+      - ApplicationGatewayAffinity=1fdae0f824bf43bf7d058765be26516f; Path=/
+      - ApplicationGatewayAffinityCORS=1fdae0f824bf43bf7d058765be26516f; Path=/; SameSite=None;
         Secure
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
@@ -44,7 +44,7 @@ http_interactions:
       Via:
       - https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       X-Api-Umbrella-Request-Id:
-      - cfld1j50n3gamm8nuah0
+      - cfldkc1ssh57t33j6cug
       X-Cache:
       - MISS
       X-Content-Type-Options:
@@ -52,9 +52,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '40'
       X-Ratelimit-Remaining:
-      - '35'
+      - '27'
       X-Vcap-Request-Id:
-      - 12592649-b1b9-4753-7cf8-d37bdc14d52b
+      - ba572a97-b065-4f51-6723-01035eee9ca6
       X-Xss-Protection:
       - 1; mode=block
       X-Frame-Options:
@@ -3962,5 +3962,5 @@ http_interactions:
         solids; Retention factors not used","derivationId":12,"value":12.7,"foodNutrientSourceId":2,"foodNutrientSourceCode":"4","foodNutrientSourceDescription":"Calculated
         or imputed","rank":6200,"indentLevel":1,"foodNutrientId":1332232,"dataPoints":0}],"finalFoodInputFoods":[],"foodMeasures":[],"foodAttributes":[],"foodAttributeTypes":[],"foodVersionIds":[]}],"aggregations":{"dataType":{"Branded":62778,"Survey
         (FNDDS)":796,"SR Legacy":282,"Foundation":19},"nutrients":{}}}'
-  recorded_at: Fri, 24 May 2024 15:40:59 GMT
+  recorded_at: Fri, 24 May 2024 16:22:00 GMT
 recorded_with: VCR 6.2.0

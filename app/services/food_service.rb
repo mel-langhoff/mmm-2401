@@ -12,8 +12,17 @@ class FoodService
   end
 
   def get_search(query)
+    # replaces each space with %20
+    query = query.gsub(" ", "%20")
     response = get_url("v1/foods/search?#{query}")
 
     response[:foods]
+  end
+
+  def total_hits(query)
+    query = query.gsub(" ", "%20")
+    response = get_url("v1/foods/search?#{query}")
+
+    response[:totalHits]
   end
 end

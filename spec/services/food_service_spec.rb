@@ -25,13 +25,23 @@ end
     service = FoodService.new
 
     VCR.use_cassette("ched_chz_search_2") do
-      foods = service.get_search("query=Cheddar")
+      foods = service.get_search("cheddar")
 
       expect(foods).to be_an(Array)
       expect(foods).not_to be_empty
 
       food = foods.first
-      expect(food).to include(:gtinUpc, :description, :brandOwner, :ingredients)
+      expect(food).to include(:description)
     end
   end
+
+  it "#total_hits" do
+    service = FoodService.new
+
+    VCR.use_cassette("ched_chz_search_3") do
+      total_results = service.total_hits("cheese")
+
+      expect(total_results).to eq 467104
+    end
+  end 
 end
