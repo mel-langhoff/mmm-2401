@@ -10,4 +10,10 @@ class FoodService
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def get_search(query)
+    response = get_url("v1/foods/search?#{query}")
+
+    response[:foods]
+  end
 end

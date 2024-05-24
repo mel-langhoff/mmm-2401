@@ -20,4 +20,18 @@ end
       expect(parsed_json[:foods]).to be_a Array
     end
   end
+
+  it "#get_search" do
+    service = FoodService.new
+
+    VCR.use_cassette("ched_chz_search_2") do
+      foods = service.get_search("query=Cheddar")
+
+      expect(foods).to be_an(Array)
+      expect(foods).not_to be_empty
+
+      food = foods.first
+      expect(food).to include(:gtinUpc, :description, :brandOwner, :ingredients)
+    end
+  end
 end
